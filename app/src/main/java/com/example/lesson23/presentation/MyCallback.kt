@@ -1,8 +1,9 @@
 package com.example.lesson23.presentation
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.lesson23.domain.StudentEntity
 
-class MyCallback(private val oldList: List<Student>, private val newList: List<Student>): DiffUtil.Callback() {
+class MyCallback(private val oldList: List<StudentEntity>, private val newList: List<StudentEntity>): DiffUtil.Callback() {
     override fun getOldListSize() = oldList.size
 
     override fun getNewListSize() = newList.size

@@ -1,13 +1,11 @@
-package com.example.lesson23
+package com.example.lesson23.presentation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lesson23.presentation.MyAdapter
 import com.example.lesson23.databinding.ActivityMainBinding
-import com.example.lesson23.presentation.CountViewModel
 
 class MainActivity : AppCompatActivity() {
 

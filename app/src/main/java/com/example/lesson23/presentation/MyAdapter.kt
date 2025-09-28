@@ -5,11 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lesson23.databinding.StudentsLayoutBinding
+import com.example.lesson23.domain.StudentEntity
 
-class MyAdapter(private var students: List<Student>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private var students: List<StudentEntity>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(val binding: StudentsLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(student: Student) {
+        fun bind(student: StudentEntity) {
             binding.tvName.text = student.name
             binding.tvRating.text = student.rating.toString()
         }
@@ -26,7 +27,7 @@ class MyAdapter(private var students: List<Student>) : RecyclerView.Adapter<MyAd
 
     override fun getItemCount() = students.size
 
-    fun updateList(newList: List<Student>) {
+    fun updateList(newList: List<StudentEntity>) {
         val diffResult = DiffUtil.calculateDiff(
             MyCallback(
                 oldList = students,
